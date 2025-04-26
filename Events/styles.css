@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+}
+body{
+    background-color: #fff;
+}
+
+.event{
+    position: relative;
+    padding: .8em 4.5em;
+    background-color: #0e88c3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.event .events-heading h2{
+    font-size: 32px;
+    color: white;
+}
+.event .cards{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.cards a{
+    text-decoration: none;
+    width: 23%;
+}
+.cards a:hover section .description > *{
+    text-decoration: underline;
+}
+.cards a section{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    grid-area: .4em;
+    border-radius: .3em;
+}
+.cards a section .frame, .cards a section .description{
+    flex-basis: 50%;
+    position: relative;
+    border-radius: inherit;
+}
+.cards a set .frame img{
+    width: 100%;
+    height: 100%;
+    border-radius: .3em;
+    object-fit: cover;
+}
+.cards a section .description{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: .6em;
+    color: #5A5A5A;
+}
+.cards a section .description h3{
+    font-size: 15px;
+    padding: 1em 0;
+    line-height: 1.3em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.43);
+}
+.cards a section .description h3 span{
+    font-size: 20px;
+    color: #0e88c3;
+}
+.cards a section .description p{
+    padding: 1.5em 0;
+    font-size: 14px;
+}
+

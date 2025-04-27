@@ -25,3 +25,19 @@ window.addEventListener('load', () => {
       content.style.display = 'block';
     }, 3200); // Wait for the progress bar animation (3s + a tiny bit)
   });
+
+window.onscroll = () => scrollFunc() ;
+
+function scrollFunc() {
+  const btn = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {  //check if scroll is > 20px, then show btn
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });  //go to top
+}
+

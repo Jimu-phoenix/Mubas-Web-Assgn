@@ -19,9 +19,6 @@
     display: none;
 }
 body{
-    /* font-family: 'Roboto Condensed', 'Asap', sans-serif;
-    font-family: "Open Sans", sans-serif; */
-    /* font-weight: 500; */
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -29,7 +26,6 @@ body{
 }
 #wrapper{
     width: 100vw;
-    /* height: 100vh; */
     overflow: hidden;
 }
 ul li{
@@ -82,7 +78,6 @@ nav ul li a{
     color: white;
 }
 nav .drop-down{
-    /* position: relative; */
     height: 15px;
     width: 15px;
 }
@@ -103,7 +98,6 @@ nav h3{
 }
 .dropdown:hover{
     cursor: pointer;
-   /* background-color: #efd898; */
 }
 .list{
     display: none;
@@ -170,19 +164,20 @@ header .lower-nav{
 }
 
 /* --------------------------------------------------------- */
+
+
 /* ---------------------Main----------------------------- */
 main{
     position: relative;
-    left: -100vw;
     height: 100vh;
     width: 200vw;
     display: flex;
-    /* animation: slides 10s ease-out infinite */
+    animation: slides 10s ease-out infinite
 }
 #slide-1{
     height: 100%;
     width: 100vw;
-    background-image: url(slide1.jpg);
+    background-image: url(Assets/slide1.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -246,7 +241,7 @@ main{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url(slide2.jpg);
+    background-image: url(Assets/slide2.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,6 +328,8 @@ main{
     background-color: darkslategray;
 }
 /* -------------------------------------------------------- */
+
+
 /* ---------------------Quick----------------------------- */
 
 #quick{
@@ -376,6 +373,9 @@ main{
 #quick-explorer>.top>.rows, #quick-explorer>.bottom>.rows{
     display: flex;
 }
+#quick-explorer>.bottom>.rows{
+    justify-content: space-around;
+}
 #quick-explorer>.top>.rows>ul>li>a, #quick-explorer>.bottom>.rows>ul>li>a{
     text-decoration: none;
     color: white;
@@ -388,6 +388,9 @@ main{
 }
 #quick-explorer>.bottom>.rows>ul>li{
     margin: 5px;
+}
+#quick-explorer>.bottom>.rows>ul>li>i{
+    margin-right: 5px;
 }
 #quick-explorer>.bottom{
     width: 373px;
@@ -443,6 +446,184 @@ main{
     font-weight: bold;
 }
 
+/* -------------------------------------------------------- */
+/* ----------Latest Announcements && Save Project ad------ */
+#save{
+    display: flex;
+}
+#save>img{
+    margin: auto;
+}
+
+#announcements{
+    height: 736.5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    background-color: rgba(239, 216, 152, 0.38);
+    /*
+    padding-left: 20px;
+    display: flex;
+
+    flex-wrap: wrap; */
+}
+#announcements>h1{
+    padding-left: 50px;
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    color: rgb(90, 90, 90);
+}
+#announcements>.rows{
+    height: 90%;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    padding-left: 50px;
+    /* background-color: rgba(239, 216, 152, 0.38); */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.announcement{
+    width: 585px;
+    height: 20%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* background-color: #1b5f9a; */
+}
+.announcement>h4{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: block;
+    color: rgb(90, 90, 90);
+}
+.announcement>p{
+    font-family: "Open Sans", sans-serif;
+    font-size: .75rem;
+    font-weight: 300;
+    display: block;
+    color: rgb(90, 90, 90);
+    margin-top: 10px;
+}
+.announcement>a{
+    text-decoration: none;
+    color: var(--third-color);
+    font-size: .75rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* -----------------Events---------------------------------- */
+
+.event{
+    position: relative;
+    padding: .8em 4.5em;
+    background-color: #0e88c3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.event .events-heading h2{
+    font-size: 32px;
+    color: white;
+}
+.event .cards{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.cards a{
+    text-decoration: none;
+    width: 23%;
+}
+.cards a:hover section .description > *{
+    text-decoration: underline;
+}
+.cards a section{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    grid-area: .4em;
+    border-radius: .3em;
+}
+.cards a section .frame, .cards a section .description{
+    flex-basis: 50%;
+    position: relative;
+    border-radius: inherit;
+}
+.cards a set .frame img{
+    width: 100%;
+    height: 100%;
+    border-radius: .3em;
+    object-fit: cover;
+}
+.cards a section .description{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: .6em;
+    color: #5A5A5A;
+}
+.cards a section .description h3{
+    font-size: 15px;
+    padding: 1em 0;
+    line-height: 1.3em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.43);
+}
+.cards a section .description h3 span{
+    font-size: 20px;
+    color: #0e88c3;
+}
+.cards a section .description p{
+    padding: 1.5em 0;
+    font-size: 14px;
+}
+/* ------------------------------------------------------- */
+
+/* ---------------------Socials---------------------------- */
+
+.content{
+    padding-inline: 7em;
+}
+.content-vertical{
+    padding-top: 1em;
+    padding-bottom: 2em
+}
+.heading h2{
+    font-size: 30px;
+}
+.media{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: space-between;
+}
+.media article{
+    position: relative;
+    width: 50%;
+    height: 300px;
+    box-shadow: 0 0 2px black;
+    border-top: 5px solid rgba(0, 0, 255, 0.534);
+}
+.media article:first-child{
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+.media article a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* -------------------------------------------------------- */
 /* ---------------------Footer----------------------------- */
@@ -543,33 +724,92 @@ footer>ul li a{
     color:#c00303;
 }
 
+/* ---------------Loader--------------------- */
+
+ #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  #loader img {
+    width: 300px; 
+    margin-bottom: 20px;
+    animation: blink 1s ease-in-out infinite;
+  }
+
+ 
+  .progress-container {
+    width: 50%;
+    height: 4px;
+    background: #f0d68d; 
+    overflow: hidden;
+    border-radius: 4px;
+  }
 
 
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #2979ff; 
+    animation: loading 3s linear forwards;
+  }
 
-/* Slide in animation */
+ 
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+
+/* --------------Animations----------------------- */
+
 @keyframes slides {
+    0%, 20% {
+      transform: translateX(0%);
+    }
+    25%, 45% {
+      transform: translateX(-50%);
+    }
+    50%, 70% {
+      transform: translateX(-50%);
+    }
+    75%, 95% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+
+  @keyframes loading {
     0% {
-       left: 0;
+      width: 0%;
     }
-    25% {
-       left: 0;
+    100% {
+      width: 100%;
     }
-    50% {
-       left: -100vw;
-    }
-    75% {
-       left: -100vw;
-    }
-    100%{
-         left: 0;
-    }
-}
+  }
 
-#slide-2.hidden {
-    opacity: 0;
-    transform: translateX(-100%);
-}
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 
-#slide-2.visible {
-    animation: slideInFromLeft 1s ease-out forwards;
-}
+  @keyframes blink {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+  }

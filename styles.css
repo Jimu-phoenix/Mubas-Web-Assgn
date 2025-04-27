@@ -311,8 +311,6 @@ main{
     cursor: pointer;
 }
 .read-more:hover{
-    width: 10000px;
-    color: green;
     background: darkslategrey;
     background-color: darkslategray;
 }

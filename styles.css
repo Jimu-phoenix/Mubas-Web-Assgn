@@ -311,7 +311,6 @@ main{
     cursor: pointer;
 }
 .read-more:hover{
-    background: darkslategrey;
     background-color: darkslategray;
 }
 
@@ -321,9 +320,6 @@ main{
     font-size: .75rem;
     padding: 10px;
     cursor: pointer;
-}
-.read-more>a:hover{
-    background-color: darkslategray;
 }
 /* -------------------------------------------------------- */
 

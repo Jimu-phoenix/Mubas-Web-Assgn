@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       loader.classList.add('fade-out');
       content.style.display = 'block';
-    }, 3200); // Wait for the progress bar animation (3s + a tiny bit)
+    }, 3200); // Wait for the progress bar animation 
   });
 
 window.onscroll = () => scrollFunc() ;
